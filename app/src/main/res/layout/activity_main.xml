@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_activity_app_logo_img"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/logo_background"
+        android:contentDescription="@string/logo_background_desc"
+        android:src="@drawable/relaxing_icon"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_sound_name_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/main_activity_sound_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/main_activity_app_logo_img"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="18dp"
+        android:progressDrawable="@drawable/custom_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintTop_toBottomOf="@id/main_activity_sound_name_tv"
+        app:layout_constraintBottom_toTopOf="@+id/control_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/control_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/main_activity_loop_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/loop_button_icon_desc"
+            android:src="@drawable/loop_button" />
+
+        <ImageView
+            android:id="@+id/main_activity_go_forward_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/forward_button_icon_desc"
+            android:src="@drawable/forward_button" />
+
+        <ImageView
+            android:id="@+id/main_activity_play_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/play_button_icon_desc"
+            android:src="@drawable/play_button" />
+
+        <ImageView
+            android:id="@+id/main_activity_go_backward_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/backward_button_icon_desc"
+            android:src="@drawable/backward_button" />
+
+        <ImageView
+            android:id="@+id/main_activity_go_to_sound_files_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/burger_menu_icon_desc"
+            android:src="@drawable/burger_menu" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CalmSphere</string>
+    <string name="burger_menu_icon_desc">Burger Menu Icon</string>
+    <string name="backward_button_icon_desc">Backward Icon</string>
+    <string name="play_button_icon_desc">Play Icon</string>
+    <string name="forward_button_icon_desc">Forward Icon</string>
+    <string name="loop_button_icon_desc">Loop Icon</string>
+    <string name="logo_background_desc">App Logo Background</string>
+</resources>
